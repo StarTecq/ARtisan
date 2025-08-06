@@ -4,9 +4,13 @@
   "description": "ARtisan - Discover Local Art Across India",
   "main": "index.html",
   "scripts": {
-    "dev": "vercel dev",
+    "dev": "python -m http.server 3000",
     "build": "echo 'Static site - no build needed'",
-    "deploy": "vercel --prod"
+    "deploy:vercel": "vercel --prod",
+    "deploy:aws": "./deploy-aws.sh",
+    "aws:create-stack": "aws cloudformation create-stack --stack-name artisan-web-stack --template-body file://aws-infrastructure.json",
+    "aws:update-stack": "aws cloudformation update-stack --stack-name artisan-web-stack --template-body file://aws-infrastructure.json",
+    "aws:delete-stack": "aws cloudformation delete-stack --stack-name artisan-web-stack"
   },
   "keywords": [
     "artisan",

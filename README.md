@@ -43,7 +43,39 @@ A modern marketplace connecting art lovers with India's finest local artisans, f
 
 ## Deployment
 
-### Deploy to Vercel
+### Deploy to AWS (Recommended)
+
+#### Option 1: AWS Amplify (Easiest)
+1. **Push your code to GitHub**
+2. **Go to [AWS Amplify Console](https://console.aws.amazon.com/amplify/)**
+3. **Connect your GitHub repository**
+4. **Deploy automatically**
+
+#### Option 2: AWS S3 + CloudFront (Most Cost-Effective)
+
+**Prerequisites:**
+- Install [AWS CLI](https://aws.amazon.com/cli/)
+- Configure AWS credentials: `aws configure`
+
+**Quick Deploy:**
+```bash
+# Make script executable
+chmod +x deploy-aws.sh
+
+# Deploy to S3
+./deploy-aws.sh
+```
+
+**Full Infrastructure Setup:**
+```bash
+# Create complete AWS infrastructure (S3 + CloudFront)
+npm run aws:create-stack
+
+# Deploy your files
+npm run deploy:aws
+```
+
+### Deploy to Vercel (Alternative)
 
 1. **Via GitHub (Recommended)**:
    - Push your code to GitHub
@@ -61,12 +93,15 @@ A modern marketplace connecting art lovers with India's finest local artisans, f
 
 ```
 artisan-web/
-├── index.html          # Main HTML file
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-├── vercel.json         # Vercel deployment config
-├── package.json        # Project metadata
-└── README.md          # This file
+├── index.html              # Main HTML file
+├── styles.css              # Custom CSS styles
+├── script.js               # JavaScript functionality
+├── package.json            # Project metadata
+├── README.md              # This file
+├── vercel.json            # Vercel deployment config
+├── amplify.yml            # AWS Amplify build config
+├── aws-infrastructure.json # CloudFormation template
+└── deploy-aws.sh          # AWS deployment script
 ```
 
 ## Contributing
