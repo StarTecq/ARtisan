@@ -1,0 +1,26 @@
+{
+  "name": "artisan-web",
+  "version": "1.0.0",
+  "description": "ARtisan - Discover Local Art Across India",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "artisan",
+    "handicrafts",
+    "india",
+    "marketplace",
+    "ar",
+    "augmented-reality"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://github.com/StarTecq/ARtisan-web#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarTecq/ARtisan-web.git"
+  }
+}
