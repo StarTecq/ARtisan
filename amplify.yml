@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "frontend": {
+    "phases": {
+      "preBuild": {
+        "commands": [
+          "echo 'No build process needed for static site'"
+        ]
+      },
+      "build": {
+        "commands": [
+          "echo 'Building static site...'",
+          "ls -la"
+        ]
+      }
+    },
+    "artifacts": {
+      "baseDirectory": "./",
+      "files": [
+        "**/*"
+      ]
+    },
+    "cache": {
+      "paths": []
+    }
+  }
+}
