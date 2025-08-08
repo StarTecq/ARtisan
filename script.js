@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     notifyForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = emailInput.value.trim();
-        // Validate email format
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             emailInput.classList.add('form-error');
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.textContent = 'Signing Up...';
         submitBtn.disabled = true;
         try {
-            // Send to Formspree
-            const formspreeEndpoint = 'https://formspree.io/f/mkgzpeyl'; // <-- Replace with your Formspree form ID
+            
+            const formspreeEndpoint = 'https://formspree.io/f/mkgzpeyl'; 
             const response = await fetch(formspreeEndpoint, {
                 method: 'POST',
                 headers: {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Clear error styling when user starts typing
+    
     emailInput.addEventListener('input', () => {
         emailInput.classList.remove('form-error');
         if (formMessage.textContent.includes('Please enter a valid email')) {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Helper function to show messages with different styles
+    
     function showMessage(message, type = 'success') {
         formMessage.textContent = message;
         formMessage.className = `mt-4 h-5 ${type === 'error' ? 'text-red-600' : 'text-green-600'}`;
@@ -74,6 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // Simulate API call to email service
-    // ...existing code...
+    
+    
 });
