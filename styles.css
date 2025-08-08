@@ -35,3 +35,9 @@ button:disabled {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
+
+.store-btn-shadow {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.14);
+    transition: box-shadow 0.3s;
+    border-radius: 2rem !important;
+}
