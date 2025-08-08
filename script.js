@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     notifyForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
         const email = emailInput.value.trim();
-        
         // Validate email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
@@ -27,35 +25,31 @@ document.addEventListener('DOMContentLoaded', function() {
             showMessage('Please enter a valid email address.', 'error');
             return;
         }
-
-        // Remove error styling if email is valid
         emailInput.classList.remove('form-error');
-
-        // Show loading state
         const submitBtn = notifyForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Signing Up...';
         submitBtn.disabled = true;
-
         try {
-            // Here you would normally send to your backend/email service
-            // For now, we'll simulate an API call
-            await simulateEmailSignup(email);
-            
-            showMessage(`Thank you! We'll notify ${email} when we launch.`, 'success');
-            emailInput.value = '';
-            
-            // Store email in localStorage for demo purposes
-            const subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
-            if (!subscribers.includes(email)) {
-                subscribers.push(email);
-                localStorage.setItem('subscribers', JSON.stringify(subscribers));
+            // Send to Formspree
+            const formspreeEndpoint = 'https://formspree.io/f/mkgzpeyl'; // <-- Replace with your Formspree form ID
+            const response = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+            if (response.ok) {
+                showMessage(`Thank you! We'll notify ${email} when we launch.`, 'success');
+                emailInput.value = '';
+            } else {
+                showMessage('Something went wrong. Please try again later.', 'error');
             }
-            
         } catch (error) {
             showMessage('Something went wrong. Please try again later.', 'error');
         } finally {
-            // Reset button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }
@@ -81,16 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Simulate API call to email service
-    async function simulateEmailSignup(email) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simulate occasional failures for demo
-                if (Math.random() > 0.9) {
-                    reject(new Error('Network error'));
-                } else {
-                    resolve({ success: true, email });
-                }
-            }, 1000);
-        });
-    }
+    // ...existing code...
 });
