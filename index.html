@@ -1,237 +1,538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARtisan - Discover Local Art Across India</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="antialiased">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARtisan - Discover Local Art Across India</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/StarTecq/ARtisan/main/artisan.png">
+        <meta property="og:image:alt" content="ARtisan - Discover Local Art Across India">
+    </head>
+    <body class="antialiased">
+        <header
+            class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm"
+        >
+            <div
+                class="container mx-auto px-6 py-4 flex justify-between items-center"
+            >
+                <h1 class="text-2xl font-bold text-[#004D40]">ARtisan</h1>
+                <nav class="hidden md:flex items-center">
+                    <a
+                        href="#for-artisans"
+                        class="text-gray-600 hover:text-[#004D40] mx-3"
+                        >For Artisans</a
+                    >
+                    <a
+                        href="#for-consumers"
+                        class="text-gray-600 hover:text-[#004D40] mx-3"
+                        >For Consumers</a
+                    >
+                    <a
+                        href="#features"
+                        class="text-gray-600 hover:text-[#004D40] mx-3"
+                        >Features</a
+                    >
+                </nav>
+                <a
+                    href="#notify"
+                    class="hidden md:block bg-[#004D40] text-white px-5 py-2 rounded-full hover:bg-[#00332A]"
+                    >Get Notified</a
+                >
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    ☰
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-white/95">
+                <a
+                    href="#for-artisans"
+                    class="block text-center py-3 text-gray-700 hover:bg-gray-100"
+                    >For Artisans</a
+                >
+                <a
+                    href="#for-consumers"
+                    class="block text-center py-3 text-gray-700 hover:bg-gray-100"
+                    >For Consumers</a
+                >
+                <a
+                    href="#features"
+                    class="block text-center py-3 text-gray-700 hover:bg-gray-100"
+                    >Features</a
+                >
+                <a
+                    href="#notify"
+                    class="block text-center py-4 bg-[#004D40] text-white font-bold hover:bg-[#00332A]"
+                    >Get Notified</a
+                >
+            </div>
+        </header>
 
-    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-[#004D40]">ARtisan</h1>
-            <nav class="hidden md:flex items-center">
-                <a href="#for-artisans" class="text-gray-600 hover:text-[#004D40] mx-3">For Artisans</a>
-                <a href="#for-consumers" class="text-gray-600 hover:text-[#004D40] mx-3">For Consumers</a>
-                <a href="#features" class="text-gray-600 hover:text-[#004D40] mx-3">Features</a>
-            </nav>
-            <a href="#notify" class="hidden md:block bg-[#004D40] text-white px-5 py-2 rounded-full hover:bg-[#00332A]">Get Notified</a>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95">
-             <a href="#for-artisans" class="block text-center py-3 text-gray-700 hover:bg-gray-100">For Artisans</a>
-             <a href="#for-consumers" class="block text-center py-3 text-gray-700 hover:bg-gray-100">For Consumers</a>
-             <a href="#features" class="block text-center py-3 text-gray-700 hover:bg-gray-100">Features</a>
-             <a href="#notify" class="block text-center py-4 bg-[#004D40] text-white font-bold hover:bg-[#00332A]">Get Notified</a>
-        </div>
-    </header>
+        <main>
+            <section id="hero" class="pt-20 pb-24 text-center bg-white">
+                <div class="container mx-auto px-6">
+                    <h2
+                        class="text-5xl md:text-6xl font-extrabold text-[#004D40] leading-tight"
+                    >
+                        Discover Local Art. <br />See It In Your Home.
+                    </h2>
+                    <p class="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
+                        ARtisan is the marketplace connecting you with India's
+                        finest local artisans. Visualize handcrafted products in
+                        your own space with Augmented Reality.
+                    </p>
+                    <div class="mt-10">
+                        <p class="font-bold text-gray-600 mb-4">
+                            COMING SOON TO
+                        </p>
+                        <div
+                            class="flex flex-col sm:flex-row justify-center items-center gap-4"
+                        >
+                            <a
+                                href="#"
+                                class="border border-gray-800 text-gray-800 py-3 px-6 rounded-lg flex items-center w-full sm:w-auto justify-center sm:justify-start hover:bg-gray-800 hover:text-white transition-colors duration-300 store-btn-shadow"
+                            >
+                                <span class="text-3xl mr-3"></span>
+                                <div class="text-left">
+                                    <p class="text-xs">Download on the</p>
+                                    <p
+                                        class="text-lg font-semibold leading-tight"
+                                    >
+                                        App Store
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="#"
+                                class="border border-gray-800 text-gray-800 py-3 px-6 rounded-lg flex items-center w-full sm:w-auto justify-center sm:justify-start hover:bg-gray-800 hover:text-white transition-colors duration-300 store-btn-shadow"
+                            >
+                                <svg
+                                    class="w-7 h-7 mr-2"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M21.531 11.235L4.84 1.758C4.25-.22 2.53.153 2.53 1.03v20.02c0 .875 1.72 1.25 2.31.273l16.69-9.478a.749.749 0 000-1.368z"
+                                    />
+                                </svg>
+                                <div class="text-left">
+                                    <p class="text-xs">GET IT ON</p>
+                                    <p
+                                        class="text-lg font-semibold leading-tight"
+                                    >
+                                        Google Play
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <main>
-        <section id="hero" class="pt-20 pb-24 text-center bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-[#004D40] leading-tight">Discover Local Art. <br>See It In Your Home.</h2>
-                <p class="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">ARtisan is the marketplace connecting you with India's finest local artisans. Visualize handcrafted products in your own space with Augmented Reality.</p>
-                <div class="mt-10">
-                    <p class="font-bold text-gray-600 mb-4">COMING SOON TO</p>
-                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <a href="#" class="border border-gray-800 text-gray-800 py-3 px-6 rounded-lg flex items-center w-full sm:w-auto justify-center sm:justify-start hover:bg-gray-800 hover:text-white transition-colors duration-300 store-btn-shadow">
-                            <span class="text-3xl mr-3"></span>
-                            <div class="text-left">
-                                <p class="text-xs">Download on the</p>
-                                <p class="text-lg font-semibold leading-tight">App Store</p>
+            <section id="for-artisans" class="py-24">
+                <div class="container mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="text-center md:text-left">
+                            <h3 class="text-4xl font-bold text-[#004D40]">
+                                Are You an Artisan?
+                            </h3>
+                            <p class="mt-4 text-lg text-gray-700">
+                                Reach a wider audience and grow your business.
+                                ARtisan provides the tools you need to turn your
+                                passion into profit, connecting you with
+                                customers across India.
+                            </p>
+                            <ul class="mt-6 space-y-3 text-left">
+                                <li class="flex items-start">
+                                    <span
+                                        class="text-xl text-[#CC8B5A] mr-3 mt-1"
+                                        >✔</span
+                                    >
+                                    <div>
+                                        <strong class="text-[#004D40]"
+                                            >Digital Storefront:</strong
+                                        >
+                                        Easily upload your products and create
+                                        your own beautiful online shop in
+                                        minutes.
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span
+                                        class="text-xl text-[#CC8B5A] mr-3 mt-1"
+                                        >✔</span
+                                    >
+                                    <div>
+                                        <strong class="text-[#004D40]"
+                                            >Wider Reach:</strong
+                                        >
+                                        Connect with customers across India
+                                        looking for unique, authentic
+                                        handicrafts and traditional art.
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span
+                                        class="text-xl text-[#CC8B5A] mr-3 mt-1"
+                                        >✔</span
+                                    >
+                                    <div>
+                                        <strong class="text-[#004D40]"
+                                            >Business Insights:</strong
+                                        >
+                                        Get simple, AI-powered suggestions on
+                                        pricing and trends to help you sell more
+                                        effectively.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex justify-center items-center py-10">
+                            <!-- Phone mockup container -->
+                            <div
+                                class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105"
+                            >
+                                <div
+                                    class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"
+                                ></div>
+                                <div
+                                    class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"
+                                ></div>
+                                <div
+                                    class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"
+                                ></div>
+                                <div
+                                    class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"
+                                ></div>
+                                <div
+                                    class="rounded-[2rem] overflow-hidden w-full h-full bg-white"
+                                >
+                                    <img
+                                        src="buy.png"
+                                        class="w-full h-full object-cover"
+                                        alt="ARtisan App Screenshot"
+                                    />
+                                </div>
                             </div>
-                        </a>
-                        <a href="#" class="border border-gray-800 text-gray-800 py-3 px-6 rounded-lg flex items-center w-full sm:w-auto justify-center sm:justify-start hover:bg-gray-800 hover:text-white transition-colors duration-300 store-btn-shadow">
-                            <svg class="w-7 h-7 mr-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M21.531 11.235L4.84 1.758C4.25-.22 2.53.153 2.53 1.03v20.02c0 .875 1.72 1.25 2.31.273l16.69-9.478a.749.749 0 000-1.368z"/></svg>
-                            <div class="text-left">
-                                <p class="text-xs">GET IT ON</p>
-                                <p class="text-lg font-semibold leading-tight">Google Play</p>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="for-artisans" class="py-24">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="text-center md:text-left">
-                        <h3 class="text-4xl font-bold text-[#004D40]">Are You an Artisan?</h3>
-                        <p class="mt-4 text-lg text-gray-700">Reach a wider audience and grow your business. ARtisan provides the tools you need to turn your passion into profit, connecting you with customers across India.</p>
-                        <ul class="mt-6 space-y-3 text-left">
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#CC8B5A] mr-3 mt-1">✔</span>
-                                <div><strong class="text-[#004D40]">Digital Storefront:</strong> Easily upload your products and create your own beautiful online shop in minutes.</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#CC8B5A] mr-3 mt-1">✔</span>
-                                <div><strong class="text-[#004D40]">Wider Reach:</strong> Connect with customers across India looking for unique, authentic handicrafts and traditional art.</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#CC8B5A] mr-3 mt-1">✔</span>
-                                <div><strong class="text-[#004D40]">Business Insights:</strong> Get simple, AI-powered suggestions on pricing and trends to help you sell more effectively.</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex justify-center items-center py-10">
-                        <!-- Phone mockup container -->
-                        <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105">
-                            <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
-                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
-                            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-                            <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white">
-                                <img src="buy.png" class="w-full h-full object-cover" alt="ARtisan App Screenshot">
+            <section id="for-consumers" class="py-24 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div
+                            class="flex justify-center items-center order-2 md:order-2 py-10"
+                        >
+                            <!-- Phone mockup container -->
+                            <div
+                                class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl transform rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105"
+                            >
+                                <div
+                                    class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"
+                                ></div>
+                                <div
+                                    class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"
+                                ></div>
+                                <div
+                                    class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"
+                                ></div>
+                                <div
+                                    class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"
+                                ></div>
+                                <div
+                                    class="rounded-[2rem] overflow-hidden w-full h-full bg-white"
+                                >
+                                    <img
+                                        src="ar.png"
+                                        class="w-full h-full object-cover"
+                                        alt="ARtisan App AR Feature"
+                                    />
+                                </div>
                             </div>
                         </div>
+                        <div
+                            class="text-center md:text-left order-1 md:order-1"
+                        >
+                            <h3 class="text-4xl font-bold text-[#004D40]">
+                                For the Art Lover
+                            </h3>
+                            <p class="mt-4 text-lg text-gray-700">
+                                Discover the rich cultural heritage of India
+                                through its local art. Find unique pieces from
+                                artisans across the country and see how they fit
+                                in your life before you buy.
+                            </p>
+                            <ul class="mt-6 space-y-3 text-left">
+                                <li class="flex items-start">
+                                    <span
+                                        class="text-xl text-[#CC8B5A] mr-3 mt-1"
+                                        >✔</span
+                                    >
+                                    <div>
+                                        <strong class="text-[#004D40]"
+                                            >Discover Regional
+                                            Treasures:</strong
+                                        >
+                                        Browse a curated marketplace of
+                                        authentic, handcrafted goods from every
+                                        corner of India.
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span
+                                        class="text-xl text-[#CC8B5A] mr-3 mt-1"
+                                        >✔</span
+                                    >
+                                    <div>
+                                        <strong class="text-[#004D40]"
+                                            >Visualize with AR:</strong
+                                        >
+                                        Use our Augmented Reality feature to
+                                        place items in your home virtually. No
+                                        more guessing if it will fit!
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span
+                                        class="text-xl text-[#CC8B5A] mr-3 mt-1"
+                                        >✔</span
+                                    >
+                                    <div>
+                                        <strong class="text-[#004D40]"
+                                            >Connect with Creators:</strong
+                                        >
+                                        Chat directly with artisans to learn the
+                                        story behind their work or request
+                                        custom pieces.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="for-consumers" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="flex justify-center items-center order-2 md:order-2 py-10">
-                        <!-- Phone mockup container -->
-                        <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl transform rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105">
-                            <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
-                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
-                            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-                            <div class="rounded-[2rem] overflow-hidden w-full h-full bg-white">
-                                <img src="ar.png" class="w-full h-full object-cover" alt="ARtisan App AR Feature">
+            <section id="features" class="py-24">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h3 class="text-4xl font-bold text-[#004D40]">
+                            A Powerful Platform
+                        </h3>
+                        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                            We've built ARtisan with features that make buying
+                            and selling local art simple, secure, and magical
+                            across all of India.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <div
+                            class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                        >
+                            <p class="text-5xl mb-4">📍</p>
+                            <h4 class="text-xl font-bold text-[#004D40]">
+                                Location-Based Discovery
+                            </h4>
+                            <p class="mt-2 text-gray-600">
+                                Find artisans in your city or explore crafts
+                                from different states. Discover the rich
+                                diversity of Indian handicrafts.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                        >
+                            <p class="text-5xl mb-4">📷</p>
+                            <h4 class="text-xl font-bold text-[#004D40]">
+                                Augmented Reality View
+                            </h4>
+                            <p class="mt-2 text-gray-600">
+                                See it before you buy it. Place 3D models of
+                                products in your own space to check size, style,
+                                and fit perfectly.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                        >
+                            <p class="text-5xl mb-4">💡</p>
+                            <h4 class="text-xl font-bold text-[#004D40]">
+                                Smart Recommendations
+                            </h4>
+                            <p class="mt-2 text-gray-600">
+                                Our AI helps you discover new products and
+                                artisans based on your tastes, making it easy to
+                                find your next favorite piece.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                        >
+                            <p class="text-5xl mb-4">🚚</p>
+                            <h4 class="text-xl font-bold text-[#004D40]">
+                                Pan-India Shipping
+                            </h4>
+                            <p class="mt-2 text-gray-600">
+                                Order from any artisan across India with
+                                reliable shipping to your doorstep. Distance is
+                                no barrier to authentic art.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                        >
+                            <p class="text-5xl mb-4">💬</p>
+                            <h4 class="text-xl font-bold text-[#004D40]">
+                                Direct & Secure Chat
+                            </h4>
+                            <p class="mt-2 text-gray-600">
+                                Communicate directly with artisans. Ask
+                                questions, negotiate, and arrange purchases
+                                through our secure messaging system.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200"
+                        >
+                            <p class="text-5xl mb-4">🏛️</p>
+                            <h4 class="text-xl font-bold text-[#004D40]">
+                                Cultural Heritage
+                            </h4>
+                            <p class="mt-2 text-gray-600">
+                                Learn about different art forms, their history,
+                                and the stories behind each piece. Preserve
+                                India's rich cultural legacy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="regions" class="py-24 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h3 class="text-4xl font-bold text-[#004D40]">
+                            Explore Art from Across India
+                        </h3>
+                        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                            From Rajasthani textiles to Bengali pottery,
+                            Kashmiri carpets to Tamil bronze work - discover the
+                            incredible diversity of Indian craftsmanship.
+                        </p>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+                    >
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="bg-gradient-to-br from-orange-100 to-red-100 p-6 rounded-xl group-hover:shadow-lg transition-all"
+                            >
+                                <p class="text-4xl mb-3">🏛️</p>
+                                <h4 class="font-bold text-[#004D40] mb-2">
+                                    North India
+                                </h4>
+                                <p class="text-sm text-gray-600">
+                                    Rajasthani textiles, Kashmiri carpets,
+                                    Punjab handicrafts
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="bg-gradient-to-br from-green-100 to-teal-100 p-6 rounded-xl group-hover:shadow-lg transition-all"
+                            >
+                                <p class="text-4xl mb-3">🏝️</p>
+                                <h4 class="font-bold text-[#004D40] mb-2">
+                                    South India
+                                </h4>
+                                <p class="text-sm text-gray-600">
+                                    Tamil bronze work, Karnataka silk, Kerala
+                                    handicrafts
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-xl group-hover:shadow-lg transition-all"
+                            >
+                                <p class="text-4xl mb-3">🏔️</p>
+                                <h4 class="font-bold text-[#004D40] mb-2">
+                                    East India
+                                </h4>
+                                <p class="text-sm text-gray-600">
+                                    Bengali pottery, Odisha crafts, Assamese
+                                    textiles
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-xl group-hover:shadow-lg transition-all"
+                            >
+                                <p class="text-4xl mb-3">🏜️</p>
+                                <h4 class="font-bold text-[#004D40] mb-2">
+                                    West India
+                                </h4>
+                                <p class="text-sm text-gray-600">
+                                    Gujarati textiles, Maharashtrian art, Goan
+                                    crafts
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="text-center md:text-left order-1 md:order-1">
-                        <h3 class="text-4xl font-bold text-[#004D40]">For the Art Lover</h3>
-                        <p class="mt-4 text-lg text-gray-700">Discover the rich cultural heritage of India through its local art. Find unique pieces from artisans across the country and see how they fit in your life before you buy.</p>
-                        <ul class="mt-6 space-y-3 text-left">
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#CC8B5A] mr-3 mt-1">✔</span>
-                                <div><strong class="text-[#004D40]">Discover Regional Treasures:</strong> Browse a curated marketplace of authentic, handcrafted goods from every corner of India.</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#CC8B5A] mr-3 mt-1">✔</span>
-                                <div><strong class="text-[#004D40]">Visualize with AR:</strong> Use our Augmented Reality feature to place items in your home virtually. No more guessing if it will fit!</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#CC8B5A] mr-3 mt-1">✔</span>
-                                <div><strong class="text-[#004D40]">Connect with Creators:</strong> Chat directly with artisans to learn the story behind their work or request custom pieces.</div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="features" class="py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h3 class="text-4xl font-bold text-[#004D40]">A Powerful Platform</h3>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We've built ARtisan with features that make buying and selling local art simple, secure, and magical across all of India.</p>
+            <section id="notify" class="py-24">
+                <div class="container mx-auto px-6 text-center">
+                    <h3 class="text-4xl font-bold text-[#004D40]">
+                        Be the First to Know
+                    </h3>
+                    <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+                        The ARtisan app is launching soon across India. Sign up
+                        with your email to get notified the moment we go live in
+                        your city!
+                    </p>
+                    <form
+                        id="notify-form"
+                        class="mt-8 max-w-lg mx-auto flex flex-col sm:flex-row gap-4"
+                    >
+                        <input
+                            type="email"
+                            id="email-input"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                            class="w-full px-5 py-3 rounded-lg border-2 border-gray-300 focus:border-[#CC8B5A] focus:outline-none transition"
+                        />
+                        <button
+                            type="submit"
+                            class="bg-[#CC8B5A] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#b37447] transition-transform transform hover:scale-105 whitespace-nowrap"
+                        >
+                            Notify Me
+                        </button>
+                    </form>
+                    <p id="form-message" class="mt-4 text-green-600 h-5"></p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                        <p class="text-5xl mb-4">📍</p>
-                        <h4 class="text-xl font-bold text-[#004D40]">Location-Based Discovery</h4>
-                        <p class="mt-2 text-gray-600">Find artisans in your city or explore crafts from different states. Discover the rich diversity of Indian handicrafts.</p>
-                    </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                        <p class="text-5xl mb-4">📷</p>
-                        <h4 class="text-xl font-bold text-[#004D40]">Augmented Reality View</h4>
-                        <p class="mt-2 text-gray-600">See it before you buy it. Place 3D models of products in your own space to check size, style, and fit perfectly.</p>
-                    </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                        <p class="text-5xl mb-4">💡</p>
-                        <h4 class="text-xl font-bold text-[#004D40]">Smart Recommendations</h4>
-                        <p class="mt-2 text-gray-600">Our AI helps you discover new products and artisans based on your tastes, making it easy to find your next favorite piece.</p>
-                    </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                        <p class="text-5xl mb-4">🚚</p>
-                        <h4 class="text-xl font-bold text-[#004D40]">Pan-India Shipping</h4>
-                        <p class="mt-2 text-gray-600">Order from any artisan across India with reliable shipping to your doorstep. Distance is no barrier to authentic art.</p>
-                    </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                        <p class="text-5xl mb-4">💬</p>
-                        <h4 class="text-xl font-bold text-[#004D40]">Direct & Secure Chat</h4>
-                        <p class="mt-2 text-gray-600">Communicate directly with artisans. Ask questions, negotiate, and arrange purchases through our secure messaging system.</p>
-                    </div>
-                    <div class="text-center bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                        <p class="text-5xl mb-4">🏛️</p>
-                        <h4 class="text-xl font-bold text-[#004D40]">Cultural Heritage</h4>
-                        <p class="mt-2 text-gray-600">Learn about different art forms, their history, and the stories behind each piece. Preserve India's rich cultural legacy.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="regions" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h3 class="text-4xl font-bold text-[#004D40]">Explore Art from Across India</h3>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">From Rajasthani textiles to Bengali pottery, Kashmiri carpets to Tamil bronze work - discover the incredible diversity of Indian craftsmanship.</p>
+            <footer class="bg-[#004D40] text-white">
+                <div class="container mx-auto px-6 py-10 text-center">
+                    <p>&copy; 2025 ARtisan. All Rights Reserved.</p>
+                    <p class="text-sm text-gray-400 mt-2">
+                        Celebrating Indian Artisans Everywhere ♥
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="text-center group cursor-pointer">
-                        <div class="bg-gradient-to-br from-orange-100 to-red-100 p-6 rounded-xl group-hover:shadow-lg transition-all">
-                            <p class="text-4xl mb-3">🏛️</p>
-                            <h4 class="font-bold text-[#004D40] mb-2">North India</h4>
-                            <p class="text-sm text-gray-600">Rajasthani textiles, Kashmiri carpets, Punjab handicrafts</p>
-                        </div>
-                    </div>
-                    <div class="text-center group cursor-pointer">
-                        <div class="bg-gradient-to-br from-green-100 to-teal-100 p-6 rounded-xl group-hover:shadow-lg transition-all">
-                            <p class="text-4xl mb-3">🏝️</p>
-                            <h4 class="font-bold text-[#004D40] mb-2">South India</h4>
-                            <p class="text-sm text-gray-600">Tamil bronze work, Karnataka silk, Kerala handicrafts</p>
-                        </div>
-                    </div>
-                    <div class="text-center group cursor-pointer">
-                        <div class="bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-xl group-hover:shadow-lg transition-all">
-                            <p class="text-4xl mb-3">🏔️</p>
-                            <h4 class="font-bold text-[#004D40] mb-2">East India</h4>
-                            <p class="text-sm text-gray-600">Bengali pottery, Odisha crafts, Assamese textiles</p>
-                        </div>
-                    </div>
-                    <div class="text-center group cursor-pointer">
-                        <div class="bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-xl group-hover:shadow-lg transition-all">
-                            <p class="text-4xl mb-3">🏜️</p>
-                            <h4 class="font-bold text-[#004D40] mb-2">West India</h4>
-                            <p class="text-sm text-gray-600">Gujarati textiles, Maharashtrian art, Goan crafts</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </footer>
+        </main>
 
-        <section id="notify" class="py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h3 class="text-4xl font-bold text-[#004D40]">Be the First to Know</h3>
-                <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">The ARtisan app is launching soon across India. Sign up with your email to get notified the moment we go live in your city!</p>
-                <form id="notify-form" class="mt-8 max-w-lg mx-auto flex flex-col sm:flex-row gap-4">
-                    <input type="email" id="email-input" name="email" placeholder="Enter your email address" required class="w-full px-5 py-3 rounded-lg border-2 border-gray-300 focus:border-[#CC8B5A] focus:outline-none transition">
-                    <button type="submit" class="bg-[#CC8B5A] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#b37447] transition-transform transform hover:scale-105 whitespace-nowrap">Notify Me</button>
-                </form>
-                <p id="form-message" class="mt-4 text-green-600 h-5"></p>
-            </div>
-        </section>
-        
-        <footer class="bg-[#004D40] text-white">
-             <div class="container mx-auto px-6 py-10 text-center">
-                <p>&copy; 2025 ARtisan. All Rights Reserved.</p>
-                <p class="text-sm text-gray-400 mt-2">Celebrating Indian Artisans Everywhere ♥</p>
-             </div>
-        </footer>
-    </main>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
